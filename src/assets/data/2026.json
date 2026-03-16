@@ -1,23 +1,11 @@
 {
-  "startingBalance": 10000,
+  "startingBalance": 680000,
   "transactions": [
     {
-      "date": "2026-01-01",
-      "description": "Opening Income",
-      "amount": 2000,
-      "type": "income"
-    },
-    {
-      "date": "2026-01-05",
-      "description": "Office Rent",
-      "amount": 800,
+      "date": "2026-03-15",
+      "description": "Commitee members drink expense(10 soda)",
+      "amount": 100,
       "type": "expense"
-    },
-    {
-      "date": "2026-02-02",
-      "description": "Project Payment",
-      "amount": 3500,
-      "type": "income"
     }
   ]
 }
