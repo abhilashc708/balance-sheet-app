@@ -1,0 +1,23 @@
+{
+  "startingBalance": 5000,
+  "transactions": [
+    {
+      "date": "2026-01-01",
+      "description": "Opening Income",
+      "amount": 2000,
+      "type": "income"
+    },
+    {
+      "date": "2026-01-05",
+      "description": "Office Rent",
+      "amount": 800,
+      "type": "expense"
+    },
+    {
+      "date": "2026-01-10",
+      "description": "Consulting Payment",
+      "amount": 1200,
+      "type": "income"
+    }
+  ]
+}

@@ -1,3 +1,5 @@
-import { Routes } from '@angular/router';
+import { BalanceSheetComponent } from './balance-sheet/balance-sheet.component';
 
-export const routes: Routes = [];
+export const routes = [
+  { path: '', component: BalanceSheetComponent }
+];

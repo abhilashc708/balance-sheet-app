@@ -1,1 +1,60 @@
-/* You can add global styles to this file, and also import other style files */
+/* ---------- LIGHT THEME (DEFAULT) ---------- */
+
+:root{
+  --bg-color:#f5f6fa;
+  --text-color:#222;
+
+  --card-bg:#ffffff;
+  --table-bg:#ffffff;
+
+  --border-color:#ddd;
+
+  --btn-bg:#4a69bd;
+  --btn-text:#ffffff;
+}
+
+/* ---------- DARK THEME ---------- */
+
+.dark-theme{
+  --bg-color:#121212;
+  --text-color:#ffffff;
+
+  --card-bg:#1e1e1e;
+  --table-bg:#1e1e1e;
+
+  --border-color:#444;
+
+  --btn-bg:#3b5bcc;
+  --btn-text:#ffffff;
+}
+
+/* ---------- GLOBAL ---------- */
+
+body{
+  background:var(--bg-color);
+  color:var(--text-color);
+  transition:0.3s;
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+/* buttons */
+
+button{
+  background:var(--btn-bg);
+  color:var(--btn-text);
+  border:none;
+  border-radius:6px;
+  padding:8px 14px;
+  cursor:pointer;
+}
+
+/* select */
+
+select{
+  padding:6px 10px;
+  border-radius:6px;
+  border:1px solid var(--border-color);
+  background:var(--card-bg);
+  color:var(--text-color);
+}
