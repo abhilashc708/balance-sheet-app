@@ -118,21 +118,43 @@ downloadExcel(){
 }
 
 downloadPDF(){
+  const original = document.getElementById('dashboard');
+  // 🔥 clone the UI
+  const cloned = original!.cloneNode(true) as HTMLElement;
+  // hide buttons in clone only
+  const elements = cloned.querySelectorAll('.no-print');
+  elements.forEach((el: any) => el.style.display = 'none');
+  // move clone off-screen (invisible to user)
+  cloned.style.position = 'absolute';
+  cloned.style.top = '-9999px';
+  document.body.appendChild(cloned);
 
-  const data=document.getElementById("dashboard");
+  html2canvas(cloned, {
+    scale: 2,
+    backgroundColor: '#ffffff'
+  }).then(canvas => {
+    const imgWidth = 210;
+    const pageHeight = 297;
+    const imgHeight = canvas.height * imgWidth / canvas.width;
+    let heightLeft = imgHeight;
+    const imgData = canvas.toDataURL('image/png');
+    const pdf = new jsPDF('p','mm','a4');
+    let position = 0;
 
-  html2canvas(data!).then(canvas=>{
+    pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+    heightLeft -= pageHeight;
 
-    const imgWidth=208;
-    const imgHeight=canvas.height * imgWidth / canvas.width;
+    while (heightLeft > 0) {
+      position = heightLeft - imgHeight;
+      pdf.addPage();
+      pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+      heightLeft -= pageHeight;
+    }
 
-    const imgData=canvas.toDataURL('image/png');
+    pdf.save('finance-report.pdf');
 
-    const pdf=new jsPDF();
-
-    pdf.addImage(imgData,'PNG',0,0,imgWidth,imgHeight);
-
-    pdf.save("finance-report.pdf");
+    // 🔥 remove cloned DOM
+    document.body.removeChild(cloned);
 
   });
 
@@ -146,7 +168,5 @@ document.body.classList.add("dark-theme");
 }else{
 document.body.classList.remove("dark-theme");
 }
-
 }
-
 }

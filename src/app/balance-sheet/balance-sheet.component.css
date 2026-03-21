@@ -80,5 +80,8 @@ grid-template-columns:1fr 1fr;
 flex-direction:column;
 gap:10px;
 }
+}
 
+.hide-for-pdf {
+  display: none !important;
 }
