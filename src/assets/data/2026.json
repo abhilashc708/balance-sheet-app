@@ -6,6 +6,18 @@
       "description": "Commitee members drink expense(10 soda)",
       "amount": 100,
       "type": "expense"
+    },
+    {
+      "date": "2026-08-09",
+      "description": "Trip to nalambhala yatra",
+      "amount": 3000,
+      "type": "income"
+    },
+     {
+      "date": "2026-08-16",
+      "description": "Donate to mankurussi temple kodimaram",
+      "amount": 3000,
+      "type": "expense"
     }
   ]
 }
