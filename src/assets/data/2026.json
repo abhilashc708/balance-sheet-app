@@ -18,6 +18,12 @@
       "description": "Donate to mankurussi temple kodimaram",
       "amount": 3000,
       "type": "expense"
+    },
+    {
+      "date": "2026-10-05",
+      "description": "Theyyam booking advance amount",
+      "amount": 3000,
+      "type": "expense"
     }
   ]
 }
